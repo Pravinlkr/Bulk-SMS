@@ -36,12 +36,18 @@
               <li>
               <a href="settings.php"><span class="fa fa-cogs mr-3"></span> Settings</a>
 	          </li>
+			  <?php
+					session_start();
+					if(!isset($_SESSION["username"])){
+				?>
 	          <li>
               <a href="login.php"><span class="fa fa-sign-in mr-3"></span> Login</a>
 	          </li>
+			  <?php } else{ ?>
 	          <li>
-              <a href="#"><span class="fa fa-sign-out mr-3"></span> Logout</a>
+              <a href="logout.php"><span class="fa fa-sign-out mr-3"></span> Logout</a>
 	          </li>
+			  <?php } ?>
 	        </ul>
 
 
